@@ -1,0 +1,41 @@
+{
+  "name": "never5/download-monitor",
+  "description": "Download Monitor",
+  "keywords": [
+    "wordpress",
+    "download monitor"
+  ],
+  "homepage": "https://www.download-monitor.com/",
+  "license": "GPL-2.0+",
+  "author": "Never5",
+  "autoload": {
+    "psr-4": {
+      "Never5\\DownloadMonitor\\": "src/"
+    },
+    "classmap": [
+      "src/"
+    ]
+  },
+  "require": {
+  },
+  "require-dev": {
+    "pimple/pimple": "*",
+    "paypal/rest-api-sdk-php": "*",
+    "phpunit/phpunit": "^6.4",
+    "coenjacobs/mozart": "^0.3.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "mozart": {
+      "dep_namespace": "Never5\\DownloadMonitor\\Dependencies\\",
+      "dep_directory": "/src/Dependencies/",
+      "classmap_directory": "/tmp/mozart",
+      "classmap_prefix": "NOTUSED_",
+      "packages": [
+        "paypal/rest-api-sdk-php",
+        "pimple/pimple"
+      ]
+    }
+  }
+}
